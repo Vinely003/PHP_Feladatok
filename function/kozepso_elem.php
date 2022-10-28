@@ -18,4 +18,6 @@ function szamitas($szam)
         return 'A megadott szám páratlan ezért a számsor közepe: ' . $szam[($id / 2) - 1];
     }
 }
+
+echo szamitas('123').'<br>';
 echo szamitas('1234');

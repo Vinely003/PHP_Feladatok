@@ -1,0 +1,36 @@
+body {
+    background-color: lightgrey;
+    text-align: center;
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 16px;
+
+    td {
+        border: solid 1px black;
+    }
+}
+
+.gombok {
+    &:hover {
+        background-color: gray;
+    }
+}
+
+#kijelol {
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+#button {
+    position: relative;
+    margin-top: 10px;
+}

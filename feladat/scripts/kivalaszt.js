@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "./moduls/megye.php",
+        url: "./modules/megye.php",
         dataType: "html",
         success: function (data) {
             $("#megyeSelect").html(data);
@@ -15,7 +15,7 @@ $(document).ready(function () {
         var megyeId = $(this).val();
         $.ajax({
             type: "POST",
-            url: "./moduls/varos.php",
+            url: "./modules/varos.php",
             data: { megyeId: megyeId },
             success: function (data) {
                 $("#varosTabla").html(data);
@@ -32,7 +32,7 @@ $(document).ready(function () {
         var ujVaros = $("#ujVaros").val();
         $.ajax({
             type: "POST",
-            url: "./moduls/ujvaros.php",
+            url: "./modules/ujvaros.php",
             data: { megyeId: megyeId, ujVaros: ujVaros },
             success: function (data) {
                 $("#varosTabla").html(data);
@@ -46,7 +46,7 @@ $(document).ready(function () {
         var $sor = $(this).closest("tr");
         $.ajax({
             type: "POST",
-            url: "./moduls/torol.php",
+            url: "./modules/torol.php",
             data: { varosid: varosid },
             success: function (data) {
                 if (data == "sikeres") {
@@ -62,7 +62,7 @@ $(document).ready(function () {
         var ujVarosNev = $ujVarosNevElem.val();
         $.ajax({
             type: "POST",
-            url: "./moduls/modosit.php",
+            url: "./modules/modosit.php",
             data: { varosid: varosid, ujVarosNev: ujVarosNev },
             success: function (data) {
                 $("#varosTabla").find(".gombok").hide();

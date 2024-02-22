@@ -30,4 +30,6 @@ VALUES
     ('Vas'),
     ('Győr - Moson - Sopron');
 
-CREATE TABLE varos(id INT AUTO_INCREMENT PRIMARY KEY, megye_id INT,varos_nev VARCHAR(255));
+CREATE TABLE varos(id INT AUTO_INCREMENT PRIMARY KEY, megye_id INT, varos_nev VARCHAR(255));
+
+CREATE TABLE users(id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), username VARCHAR(255));
